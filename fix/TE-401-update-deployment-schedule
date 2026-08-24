@@ -1,0 +1,16 @@
+# TechEdge Core API — Quick Reference
+
+## Authentication
+All API calls require a Bearer token obtained via **Azure AD OAuth 2.0**.
+Clients must register their Azure AD tenant ID with TechEdge IT before onboarding.
+
+## Deployment
+Production deploys on **every merge to main** (continuous deployment).
+Deploys are automatic — the weekly Thursday 18:00 CET window has been 
+deprecated as of August 2026. The `make release` target has been removed.
+
+## Base URL
+https://api.techedge.dk/v1
+
+## Rate limits
+100 requests/minute per client token.
