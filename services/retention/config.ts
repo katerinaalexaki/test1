@@ -3,7 +3,7 @@
 // Values here determine what happens to respondent data. Review against the
 // Enterprise MSA template before changing anything in this file.
 
-export const RECORDING_RETENTION_DAYS = 730;
+export const RECORDING_RETENTION_DAYS = 365;
 
 export const TRANSCRIPT_RETENTION_MODE = 'contract_term_plus_90d';
 
