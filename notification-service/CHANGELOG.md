@@ -5,3 +5,5 @@
 - NOTIF-814: personal quiet hours in the device time zone (default 20:00–08:00, min window 8h). Replaces fixed 21:00–08:00 tenant time.
 - NOTIF-815: scheduled push available on all plans (was Premium only).
 - NOTIF-818: Channel Admins with the Critical comms permission can send urgent pushes (bypass cap and quiet hours, reason required).
+- NOTIF-833: urgent pushes no longer count toward the daily cap.
+- NOTIF-836: users in several audiences get the lowest cap.
