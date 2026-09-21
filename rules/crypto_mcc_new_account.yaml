@@ -1,0 +1,10 @@
+rrule_id: CRYPTO_MCC_NEW_ACCOUNT
+description: Decline card payments to crypto exchanges for accounts opened less than 90 days ago
+scope: card_payments
+conditions: { merchant_category_code: [6051], account_age_days: { lt: 90 } }
+action: decline
+decline_reason: MCC_RESTRICTED_DEFAULT
+admin_override: false
+shadow_mode: false
+status: active
+owner: fraud-rules
