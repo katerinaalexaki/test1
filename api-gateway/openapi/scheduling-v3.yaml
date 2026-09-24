@@ -1,0 +1,45 @@
+openapi: 3.0.3
+info:
+  title: Sociabble Scheduling API
+  version: 3.0.0
+  description: >
+    Smart Scheduling endpoints (release 2026.9). Replaces /v2/advocacy/posts/schedule,
+    which is deprecated and sunsets on 2026-12-31.
+x-rate-limit:
+  per-tenant-requests-per-minute: 600
+paths:
+  /v3/scheduling/queue:
+    post:
+      summary: Queue an advocacy item for a user at the recommended time
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [userId, itemId, networks]
+              properties:
+                userId: { type: string }
+                itemId: { type: string }
+                networks:
+                  type: array
+                  maxItems: 5
+                  items:
+                    type: string
+                    enum: [linkedin, x, facebook, instagram, threads]
+      responses:
+        '201': { description: Queued }
+        '409': { description: QUEUE_FULL (max 30 per user) }
+    get:
+      summary: List a user's queue
+      responses:
+        '200': { description: OK }
+  /v3/scheduling/queue/{id}:
+    delete:
+      summary: Remove a queued post
+      responses:
+        '204': { description: Removed }
+  /v3/scheduling/recommendations:
+    get:
+      summary: Recommended posting time per network for a user and item
+      responses:
+        '200': { description: OK }
