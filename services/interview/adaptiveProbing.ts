@@ -1,14 +1,8 @@
 // Adaptive probing orchestration for the AI Interviewer.
-// v2 is the production default. v3 is behind a flag and still in beta.
+// v3 is the only path. The v2 path and its flag were removed in this change.
 // See the AI Interviewer product overview and the H2 roadmap before changing.
 
-export const ADAPTIVE_PROBING_V3_ENABLED = false;
-
-// v2: fixed follow-up depth, no stop condition on repeated probes.
-export const V2_MAX_FOLLOW_UPS = 4;
-export const V2_PROMPT_TEMPLATE = 'probing/v2/base';
-
-// v3 (beta): voice and hesitation signals drive probe timing.
+// v3: voice and hesitation signals drive probe timing.
 // Hard stop after three follow-ups on a single theme.
 export const V3_MAX_FOLLOW_UPS = 3;
 export const V3_PROMPT_TEMPLATE = 'probing/v3/base';
@@ -19,5 +13,5 @@ export const V3_USES_VOICE_SIGNALS = true;
 export const BETA_SAMPLING_RATE = 0.2;
 export const GA_SAMPLING_RATE = 0.05;
 
-export const activeProbingTemplate = ADAPTIVE_PROBING_V3_ENABLED ? V3_PROMPT_TEMPLATE : V2_PROMPT_TEMPLATE;
-export const activeSamplingRate = ADAPTIVE_PROBING_V3_ENABLED ? BETA_SAMPLING_RATE : GA_SAMPLING_RATE;
+export const activeProbingTemplate = V3_PROMPT_TEMPLATE;
+export const activeSamplingRate = GA_SAMPLING_RATE;
