@@ -1,5 +1,10 @@
 # Changelog — notification-service
 
+## 26.9.2 — 30 Sept 2026 (hotfix train, mobile 3.2.1)
+- NOTIF-838: minimum personal quiet hours lowered from 8h to 6h.
+- NOTIF-841: urgent pushes from Channel Admins require Global Admin approval (15 min timeout, then sent as standard). Tenant setting ON by default.
+- ADV-389: smart push fallback send time 10:00 → 12:30 local.
+
 ## 26.9.0 — 22 Sept 2026
 - NOTIF-812: per-audience daily push cap (1–10, default 5). Replaces the fixed platform-wide cap of 3.
 - NOTIF-814: personal quiet hours in the device time zone (default 20:00–08:00, min window 8h). Replaces fixed 21:00–08:00 tenant time.

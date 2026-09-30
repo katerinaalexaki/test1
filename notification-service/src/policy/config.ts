@@ -8,5 +8,5 @@ export const MAX_DAILY_PUSH_CAP = 10;
 // Personal quiet hours (NOTIF-814). Evaluated in the device time zone,
 // falling back to the tenant time zone when unknown.
 export const DEFAULT_QUIET_HOURS = { start: '20:00', end: '08:00' };
-export const MIN_QUIET_HOURS_WINDOW_H = 8;
+export const MIN_QUIET_HOURS_WINDOW_H = 6; // NOTIF-838: was 8h (night-shift workers)
 export const MAX_HELD_PUSHES_RELEASED = 2;
