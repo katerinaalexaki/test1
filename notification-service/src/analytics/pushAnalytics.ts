@@ -1,5 +1,7 @@
-// NOTIF-820: push analytics (delivered / opened / opened within 1h).
+// NOTIF-820 / NOTIF-847: push analytics entitlements.
 import { Plan } from '../entitlements/plans';
 
-export const PUSH_ANALYTICS_PLANS: Plan[] = ['premium', 'enterprise'];
-export const PUSH_ANALYTICS_CSV_PLANS: Plan[] = ['premium', 'enterprise'];
+// NOTIF-847: Essential gets BASIC analytics (delivered + opened per push).
+export const PUSH_ANALYTICS_BASIC_PLANS: Plan[] = ['essential', 'premium', 'enterprise'];
+// Full analytics: per-audience breakdown, opened-within-1h, CSV export.
+export const PUSH_ANALYTICS_FULL_PLANS: Plan[] = ['premium', 'enterprise'];

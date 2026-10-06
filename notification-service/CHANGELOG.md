@@ -1,5 +1,9 @@
 # Changelog — notification-service
 
+## 26.10.0 — 6 Oct 2026
+- NOTIF-845: Enterprise tenants can set a per-audience daily cap up to 15 (Essential/Premium stay at 10).
+- NOTIF-847: basic push analytics (delivered/opened) on Essential. CSV + per-audience remain Premium/Enterprise.
+
 ## 26.9.2 — 30 Sept 2026 (hotfix train, mobile 3.2.1)
 - NOTIF-838: minimum personal quiet hours lowered from 8h to 6h.
 - NOTIF-841: urgent pushes from Channel Admins require Global Admin approval (15 min timeout, then sent as standard). Tenant setting ON by default.
@@ -13,4 +17,4 @@
 - NOTIF-833: urgent pushes no longer count toward the daily cap.
 - NOTIF-836: users in several audiences get the lowest cap.
 - NOTIF-820: push analytics (Premium, Enterprise) with CSV export.
-- ADV-377: advocacy smart push replaces the 10:00 digest (fallback 10:00 local when - NOTIF-836: users in several audiences get the lowest cap.lt;10 data points).
+- ADV-377: advocacy smart push replaces the 10:00 digest (fallback 10:00 local when <10 data points).
